@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .vite/
+api/index.cjs
 
 # SQLite database files — committed intentionally for the demo so the
 # first deploy on Vercel renders with real data. Writes are ephemeral
