@@ -60,7 +60,7 @@ async function buildAll() {
 
   console.log("building vercel api function (api/handler.cjs)...");
   await esbuild({
-    entryPoints: ["api/handler.ts"],
+    entryPoints: ["vercel-handler/index.ts"],
     platform: "node",
     bundle: true,
     format: "cjs",
