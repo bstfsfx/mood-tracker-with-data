@@ -2,9 +2,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/public",
   "functions": {
-    "api/index.ts": {
-      "maxDuration": 30,
-      "memory": 1024
+    "api/index.cjs": {
+      "maxDuration": 30
     }
   },
   "rewrites": [
