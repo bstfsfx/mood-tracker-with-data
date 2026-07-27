@@ -1,11 +1,8 @@
 {
   "buildCommand": "npm run build",
-  "builds": [
-    { "src": "dist/public/**", "use": "@vercel/static" },
-    { "src": "api/index.cjs", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/index.cjs" }
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index" }
   ],
   "env": {
     "DATA_DIR": "/tmp"
