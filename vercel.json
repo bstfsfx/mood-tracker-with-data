@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/public",
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/handler" }
+    { "source": "/api/(.*)", "destination": "/api/index" }
   ],
   "env": {
     "DATA_DIR": "/tmp"

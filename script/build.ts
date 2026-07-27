@@ -59,19 +59,7 @@ async function buildAll() {
   });
 
   console.log("building vercel api function (api/handler.cjs)...");
-  await esbuild({
-    entryPoints: ["vercel-handler/index.ts"],
-    platform: "node",
-    bundle: true,
-    format: "cjs",
-    outfile: "api/handler.cjs",
-    define: {
-      "process.env.NODE_ENV": '"production"',
-    },
-    minify: true,
-    external: externals,
-    logLevel: "info",
-  });
+  // Skip — Vercel's @vercel/node bundles api/index.ts directly.
 }
 
 buildAll().catch((err) => {
